@@ -1,0 +1,42 @@
+%% reports/template/main.tex
+%% Copy this entire folder when starting a new report.
+%% Rename the folder to: reports/report-<NN>-<short-slug>/
+
+\documentclass[12pt, a4paper]{article}
+
+% ── Shared preamble (packages, styles) ───────────────────────────────────────
+\input{../../shared/preamble}
+
+% ── Report metadata — EDIT THESE ─────────────────────────────────────────────
+\newcommand{\ReportTitle}{Report Title Here}
+\newcommand{\ReportSubtitle}{Subtitle or Research Question}
+\newcommand{\ReportAuthors}{Author One \and Author Two \and Author Three}
+\newcommand{\ReportDate}{\today}
+
+% ── Bibliography file ─────────────────────────────────────────────────────────
+\addbibresource{references.bib}
+
+% ─────────────────────────────────────────────────────────────────────────────
+\begin{document}
+
+% Title page
+\input{../../shared/title_page}
+\newpage
+
+% Table of contents
+\tableofcontents
+\newpage
+
+% ── Sections — add/remove as needed ──────────────────────────────────────────
+\input{sections/01_introduction}
+\input{sections/02_literature_review}
+\input{sections/03_methodology}
+\input{sections/04_results}
+\input{sections/05_discussion}
+\input{sections/06_conclusion}
+
+% ── Bibliography ─────────────────────────────────────────────────────────────
+\newpage
+\printbibliography[heading=bibintoc]
+
+\end{document}

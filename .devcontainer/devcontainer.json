@@ -1,0 +1,53 @@
+{
+  "name": "LaTeX Research Reports",
+  "image": "ghcr.io/xu-cheng/texlive-full:latest",
+  "features": {
+    "ghcr.io/devcontainers/features/git:1": {},
+    "ghcr.io/devcontainers/features/github-cli:1": {}
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "James-Yu.latex-workshop",
+        "valentjn.vscode-ltex",
+        "streetsidesoftware.code-spell-checker",
+        "eamodio.gitlens",
+        "mhutchie.git-graph"
+      ],
+      "settings": {
+        "latex-workshop.latex.tools": [
+          {
+            "name": "latexmk",
+            "command": "latexmk",
+            "args": [
+              "-pdf",
+              "-interaction=nonstopmode",
+              "-file-line-error",
+              "-synctex=1",
+              "%DOC%"
+            ]
+          }
+        ],
+        "latex-workshop.latex.recipes": [
+          {
+            "name": "latexmk (PDF)",
+            "tools": ["latexmk"]
+          }
+        ],
+        "latex-workshop.view.pdf.viewer": "tab",
+        "latex-workshop.latex.autoBuild.run": "onSave",
+        "latex-workshop.latex.clean.fileTypes": [
+          "*.aux", "*.bbl", "*.bcf", "*.blg", "*.fdb_latexmk",
+          "*.fls", "*.lof", "*.log", "*.lot", "*.out",
+          "*.run.xml", "*.synctex.gz", "*.toc"
+        ],
+        "editor.wordWrap": "on",
+        "files.associations": {
+          "*.tex": "latex",
+          "*.bib": "bibtex"
+        }
+      }
+    }
+  },
+  "postCreateCommand": "echo 'LaTeX environment ready. Open a .tex file and start writing!'"
+}

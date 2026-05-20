@@ -1,0 +1,35 @@
+%% reports/report-01-sample/main.tex
+%% This is the first real report — replace placeholder text with your content.
+
+\documentclass[12pt, a4paper]{article}
+
+\input{../../shared/preamble}
+
+% ── Report metadata ───────────────────────────────────────────────────────────
+\newcommand{\ReportTitle}{Research Methods: Sample Report}
+\newcommand{\ReportSubtitle}{An Illustrative Example of the Report Structure}
+\newcommand{\ReportAuthors}{Author One \and Author Two \and Author Three}
+\newcommand{\ReportDate}{May 2026}
+
+\addbibresource{references.bib}
+
+% ─────────────────────────────────────────────────────────────────────────────
+\begin{document}
+
+\input{../../shared/title_page}
+\newpage
+
+\tableofcontents
+\newpage
+
+\input{sections/01_introduction}
+\input{sections/02_literature_review}
+\input{sections/03_methodology}
+\input{sections/04_results}
+\input{sections/05_discussion}
+\input{sections/06_conclusion}
+
+\newpage
+\printbibliography[heading=bibintoc]
+
+\end{document}

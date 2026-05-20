@@ -1,0 +1,68 @@
+name: Compile LaTeX Reports
+
+on:
+  push:
+    branches: ["main", "dev"]
+    paths:
+      - "reports/**"
+      - "shared/**"
+  pull_request:
+    branches: ["main"]
+    paths:
+      - "reports/**"
+      - "shared/**"
+  workflow_dispatch:  # allow manual trigger
+
+jobs:
+  compile:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        # Add each report folder name here as you create new reports
+        report:
+          - report-01-sample
+    name: Compile ${{ matrix.report }}
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Compile LaTeX
+        uses: xu-cheng/latex-action@v3
+        with:
+          working_directory: reports/${{ matrix.report }}
+          root_file: main.tex
+          latexmk_use_lualatex: false
+          latexmk_shell_escape: true
+          extra_packages: "biber"
+          args: "-pdf -interaction=nonstopmode -file-line-error"
+
+      - name: Upload PDF artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: ${{ matrix.report }}-pdf
+          path: reports/${{ matrix.report }}/main.pdf
+          retention-days: 30
+
+  # Optional: commit PDFs back to a dedicated branch
+  publish-pdfs:
+    runs-on: ubuntu-latest
+    needs: compile
+    if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Download all PDF artifacts
+        uses: actions/download-artifact@v4
+        with:
+          path: compiled-pdfs/
+
+      - name: Publish PDFs to gh-pages branch
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: compiled-pdfs/
+          publish_branch: compiled-pdfs
+          keep_files: true
+          commit_message: "ci: update compiled PDFs [skip ci]"
