@@ -1,0 +1,308 @@
+\documentclass[12pt]{report}
+
+%------------------------------------------------
+% Packages
+%------------------------------------------------
+\usepackage[a4paper,
+left=1.5in,
+right=1in,
+top=1.5in,
+bottom=1in]{geometry}
+
+\usepackage{times}
+\usepackage{setspace}
+\usepackage{graphicx}
+\usepackage{tocloft}
+\usepackage{fancyhdr}
+\usepackage{titlesec}
+\usepackage[hidelinks]{hyperref}
+
+%------------------------------------------------
+% Line Spacing
+%------------------------------------------------
+\onehalfspacing
+
+%------------------------------------------------
+% Header and Footer
+%------------------------------------------------
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot[C]{\thepage}
+
+%------------------------------------------------
+% Chapter Formatting
+%------------------------------------------------
+\titleformat{\chapter}
+{\normalfont\huge\bfseries}
+{\thechapter}{20pt}{\Huge}
+
+%------------------------------------------------
+% Begin Document
+%------------------------------------------------
+\begin{document}
+
+%------------------------------------------------
+% Title Page
+%------------------------------------------------
+\begin{titlepage}
+    \centering
+    
+    \vspace*{1.5cm}
+    
+    {\Huge \textbf{A Better Open Area}}\\[1.5cm]
+    
+    \vspace{2cm}
+    
+    {\Large
+    \textbf{How the UCSC Open Area is used for academic and non-academic activities across different times of the day, and what factors influence students to choose the space for studying versus social interaction}
+    }\\[2cm]
+    
+    \vfill
+    
+    \begin{flushleft}
+    \textbf{Research Area:} UCSC Open Area\\[0.5cm]
+    
+    \textbf{Module:} SCS 3312 -- Research Methods\\[0.5cm]
+
+    \textbf{Group Number:} 08\\[0.5cm]
+    
+    
+    \textbf{Group Members:}\\
+    Member 1. K.B Jayawardhana - 2023 CS 078\\
+    Member 2. D.M.U.P Dissanayake - 2023 CS 038\\
+    Member 3.  T Venugoban - 2023 CS 209\\[0.5cm]
+    
+    \textbf{University:} University of Colombo School of Computing\\[0.5cm]
+    
+    \textbf{Date:} 20.05.2026
+    \end{flushleft}
+    
+\end{titlepage}
+
+%------------------------------------------------
+% Roman Numbering
+%------------------------------------------------
+\pagenumbering{roman}
+
+%------------------------------------------------
+% Table of Contents
+%------------------------------------------------
+\tableofcontents
+\newpage
+
+%------------------------------------------------
+% List of Figures
+%------------------------------------------------
+%\listoffigures
+%\newpage
+
+%------------------------------------------------
+% List of Tables
+%------------------------------------------------
+%\listoftables
+%\newpage
+
+%------------------------------------------------
+% Arabic Numbering Starts
+%------------------------------------------------
+\pagenumbering{arabic}
+
+%------------------------------------------------
+% Introduction Chapter
+%------------------------------------------------
+\chapter{Introduction}
+
+Open study areas are one of the most important features of a university. But even though these spaces are mentioned as study areas, they are used for many other non-academic and recreational activities. Students use these spaces for  studying, group discussions, social interaction, or relaxation depending on environmental conditions, social context, and time-related constraints. Hence these spaces act as informal learning environments.
+
+Understanding how students utilize these spaces is important because it provides insight into understanding students behavior, effectiveness of the space according to the context it is used as, and the role of an informal learning environment within university life. 
+
+This study aims to investigate the patterns of usage within the UCSC open area and identify the factors that influence students' decisions to use the space for studying or social interaction.
+%------------------------------------------------
+% Field Site
+%------------------------------------------------
+\section*{Field Site}
+
+The selected field site for this study is the Open Area of the University of Colombo School of Computing. Observations will be conducted during multiple periods of the day(within operating hours of the university), including:
+
+\begin{itemize}
+    \item Morning
+    \item Midday
+    \item Afternoon
+    \item Evening 
+\end{itemize}
+
+This will allow the group to identify changes in utilization patterns over time.
+
+%------------------------------------------------
+% Research Problem
+%------------------------------------------------
+\chapter{Research Problem}
+
+The UCSC open area is frequently occupied by students throughout the day. However the way students utilize this space changes throughout the day. While some students use this area for individual or group studying, others use it for casual discussions, social gatherings, club activities, or other recreational activities. Currently, there is a limited understanding on what causes these changes in behavior.
+
+%\begin{itemize}
+%   \item how the space is utilized at different times of the day,
+%    \item the proportion of academic versus non-academic use,
+%    \item and the environmental or social factors that influence students' choice of activity within the space.
+%\end{itemize}
+
+Without such understanding, it is difficult to evaluate the effectiveness of the open area as a shared academic environment.
+
+%------------------------------------------------
+% Research Questions
+%------------------------------------------------
+\section*{Research Questions}
+
+\begin{enumerate}
+    \item How does the utilization of the UCSC open area vary across different times of the day?
+    
+    \item What proportion of observed activities within the open area are academic versus non-academic?
+    
+    \item What environmental and social factors influence students' decision to use the space for studying rather than social interaction?
+\end{enumerate}
+
+%------------------------------------------------
+% Research Objectives
+%------------------------------------------------
+\chapter{Research Objectives}
+
+\section*{Main Objective}
+
+To investigate how the UCSC open area is utilized for academic and non-academic purposes and identify the factors influencing students' choice of activity within the space.
+
+\section*{Specific Objectives}
+
+\begin{itemize}
+    \item To observe and categorize activities occurring within the UCSC open area.
+    
+    \item To identify temporal patterns in space utilization throughout the day.
+    
+    \item To compare the frequency of academic and non-academic activities.
+    
+    \item To identify environmental and social factors affecting students' use of the space.
+    
+    \item To understand student perceptions regarding the suitability of the open area for studying and social interaction.
+\end{itemize}
+
+
+%------------------------------------------------
+% Significance of the Study
+%------------------------------------------------
+\chapter{Significance of the Study}
+
+This study is relevant because by understanding how students utilize the UCSC open area, the study may provide valuable insight under the following key points.
+
+\begin{itemize}
+    \item the effectiveness of informal learning environments,
+    \item behavioral patterns within shared student spaces,
+    \item and factors that encourage or discourage academic engagement in open environments.
+\end{itemize}
+
+The findings may contribute to future improvements in campus space design, usage and student facility management.
+
+%------------------------------------------------
+% Methodology
+%------------------------------------------------
+\chapter{Proposed Methodology}
+
+This study will be conducted in a mixed-method research approach using both qualitative and quantitative data collection methods.
+
+\section{Quantitative Data Collection}
+
+\subsection{Structured Observation}
+
+The research group will conduct direct observations within the UCSC open area during different time periods across multiple days of the week(including weekends).The following data may be recorded:
+
+\begin{itemize}
+    \item Number of students present
+    \item Type of activity performed
+    \begin{itemize}
+        \item Individual studying
+        \item Group studying
+        \item Casual discussion
+        \item Social interaction
+        \item Recreational activity
+        \item University club activity
+    \end{itemize}
+    
+    \item Group size
+    \item Approximate session duration
+    \item Occupancy level
+    \item Noise level
+    \item Temperature
+    \item Lighting conditions
+    \item Weather conditions
+    \item Time of observation
+\end{itemize}
+
+\section{Qualitative Data Collection}
+
+\subsection{Semi-Structured Interviews}
+
+Short interviews will be conducted with students using the open area.
+
+Possible interview topics include:
+
+\begin{itemize}
+    \item Reasons for choosing the space
+    \item Preference for studying or social interaction
+    \item Environmental factors influencing usage
+    \item Perceived advantages and disadvantages of the space
+    \item Suitability of the area for academic activities
+    \item Suggested improvements to the space according to the activity done
+\end{itemize}
+
+Interview responses will be used to identify recurring themes and behavioral patterns.
+
+%------------------------------------------------
+% Expected Outcomes
+%------------------------------------------------
+\chapter{Expected Outcomes}
+The study is expected to:
+
+\begin{itemize}
+    \item identify dominant usage patterns within the UCSC open area,
+    \item reveal how the space usage changes throughout the day,
+    \item distinguish between academic and non-academic usage trends,
+    \item and identify key factors influencing student behavior within the space.
+\end{itemize}
+
+The findings may help develop a better understanding of how informal campus spaces support both learning and social interaction.
+
+%------------------------------------------------
+% Feasibility
+%------------------------------------------------
+\chapter{Feasibility}
+
+The proposed study is feasible because:
+
+\begin{itemize}
+    \item the field site is easily accessible,
+    \item observations can be conducted without specialized equipment,
+    \item the activities are directly observable,
+    \item and the required data can be collected within the allocated time frame using simple research methods.
+\end{itemize}
+
+This study aligns with the assignment requirement of conducting a real-world mixed-method investigation grounded in observable behavior.
+
+%------------------------------------------------
+% Conclusion
+%------------------------------------------------
+{
+\renewcommand{\clearpage}{}
+  \renewcommand{\cleardoublepage}{}
+  \chapter{Conclusion}
+}
+
+In this proposal, a mixed-method approach is suggested as an attempt to examine the use of the UCSC open area by students for both educational and non-educational purposes. With the help of structured observations and semi-structured interviews, it is possible to find out the temporal use of the space and factors affecting students' behavior there. This research is both practical and feasible.
+
+%------------------------------------------------
+% References
+%------------------------------------------------
+%------------------------------------------------
+% Index
+%------------------------------------------------
+%------------------------------------------------
+% End Document
+%------------------------------------------------
+\end{document}
