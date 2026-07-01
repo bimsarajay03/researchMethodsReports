@@ -1,0 +1,240 @@
+\documentclass[12pt, a4paper]{report}
+
+\usepackage[left=1.5in, right=1in, top=1.5in, bottom=1in]{geometry}
+
+\usepackage{titlesec}
+\usepackage{natbib} % Hrvrd ref.
+\usepackage[hidelinks]{hyperref}
+\usepackage{makeidx} 
+\usepackage{adjustbox}
+\makeindex
+
+\begin{document}
+
+\pagenumbering{roman}
+
+\begin{titlepage}
+    \centering
+    \vspace*{2cm}
+    \Huge\textbf{A Better Open Area}\\
+    \vspace{0.5cm}
+    \Large How the UCSC Open Area is used for academic and
+non-academic activities across different times of the day,
+and what factors influence students to choose the space
+for studying versus social interaction.\\
+    \vspace{6.5cm}
+    \textbf{Group 08}\\
+    K.B Jayawardhana - 2023/CS/078\\
+    D.M.U.P Dissanayake - 2023/CS/038\\
+    T Venugoban - 2023/CS/209\\
+    \vspace{2cm}
+    \Large \textbf{Data Collection Design \& Pilot Report (D2)}\\
+    \vspace{2cm}
+    SCS 3312 Research Methods\\
+    \vspace{0.25cm}
+    \small University of Colombo School of Computing\\
+    \vfill
+\end{titlepage}
+
+\chapter*{Acknowledgment}
+\addcontentsline{toc}{chapter}{Acknowledgment}
+We are thankful to the students of the University of Colombo School of Computing for participating in this study. Their valuable inputs helped validate 
+the findings obtained from the observations and surveys made during the research study.
+
+We would like to thank the module coordinator of the module SCS 3312, Research Methods for all his support throughout the research process and our group members for their collaboration during the field work.
+
+\chapter*{Abstract}
+\addcontentsline{toc}{chapter}{Abstract}
+This report details about the process we went through for finetuning the qualitative data collection instrument and defining and refining the variables for the ongoing research about the Open Area at University of Colombo School of Computing. The core of this research revolves around examining exactly how the space is divided between academic and non-academic activities depending on the time of day, and figuring out what specific factors actually determine whether a student chooses to study there or just socialize. Coming out of our initial phase of non-participant observations and semi-structured interviews, we noticed a very distinct trend where academic pursuits heavily dominate the morning and evening hours, while the midday and afternoon stretches are mostly taken over by non-academic activities. Based on those early qualitative findings, it became incredibly clear that environmental variables like heat, noise, and lighting are the critical determinants driving these behavioral shifts, which is exactly what this new survey instrument is designed to measure.
+
+
+% --- TOC ---
+\tableofcontents
+\clearpage
+
+% --- LOT ---
+\listoftables
+\addcontentsline{toc}{chapter}{List of Tables}
+\clearpage
+
+\chapter*{List of Acronyms}
+\addcontentsline{toc}{chapter}{List of Acronyms}
+\begin{itemize}
+    \item \textbf{UCSC:} University of Colombo School of Computing
+\end{itemize}
+\clearpage
+
+% --- Main Body  ---
+\pagenumbering{arabic}
+
+\chapter{Introduction}
+When we look at the infrastructure of a university, open study areas are incredibly important because they end up acting as these massive, chaotic informal learning environments where students engage in a wide variety of academic and non-academic tasks from seriously focused individual study sessions to loud group chats and hangouts. Over at the UCSC Open Area, we could see students occupying the space pretty much all day, but we really lack a deep understanding of what specific environmental or social variables are actually driving them to choose that specific spot over anywhere else. 
+
+Coming off the back of our D1 qualitative fieldwork—where we saw firsthand how things like power plug availability and midday heat completely dictate how students act when using the open area of UCSC, this D2 phase is all about taking those early insights and building a solid foundation for the quantitative survey by finetuning the proceedings we have planned so far to execute in the next phases for gathering quantitative insights and etc. by also validating our D1 phase findings as well. The main goal here is to design and validate an instrument that can accurately measure the frequency of different activities and figure out the exact factors pushing or pulling students into the space and it's usage patterns.
+
+\chapter{Data Collection Design}
+When designing the survey we heavily relied on the objectives of our research we specified on our project proposal and the findings of the observations we gained in the early phase(D1) and moved forward in order to make our research a success with validity. We wanted to avoid survey fatigue at all costs, because students usually just skip long forms, so we stuck strictly to closed-ended questions, checkboxes, and 1-to-5 scales to keep things moving fast and simple. The aim of the draft survey was to capture few main variable groups via the pilot testings. The variable categories we used can be briefed as follows.
+\begin{itemize}
+\item \textbf{Demographic and temporal variables} to see what faculty they belong to and how long they planned to stay.
+\item \textbf{Usage variables} to categorize whether they were doing individual studying, group work, or just socializing.
+\item \textbf{Environmental variables} where students could rate things like the current noise, lighting, and thermal comfort.
+\item \textbf{Motivational variables} to see if they were pulled in by the Wi-Fi, proximity to classes, or just because their friends were hanging out there.
+\end{itemize}
+
+\chapter{Pilot Testing Methodology}
+To verify if we have created a survey that can make a sense to the normal students, we ran few pilot tests right in the Open Area with the help of it's users who were there at that time. We created a \href{https://docs.google.com/forms/d/e/1FAIpQLSeu4iXarbDWG3o-umhNbCiAfVOEawvgWIx13IcGa5CEnnVh-w/viewform?usp=dialog}{Google Form} with the following questions that we finally came up with to include in our survey.
+
+\begin{enumerate}
+\item Your Faculty? (UCSC/FOS/FOA/FOL/FMF/Other)
+\item Year of study? (Year 1/Year 2/Year 3/Year 4)
+\item How long do you plan to be in the Open Area today? (Less than 30 mins/30 - 60 mins/1 - 2 hours/More than 2 hours)
+\item What is your PRIMARY activity right now? [Tick only ONE] (Deep Academic Study [Individual]/Collaborative Academic Work [Group]/Club-ExCom Duties/Casual Socializing / Chatting/Recreation [Gaming, Eating, Relaxing])
+\item What other SECONDARY activities are you participating in simultaneously? [Tick all that apply, optional] (Deep Academic Study [Individual]/Collaborative Academic Work [Group]/Club-ExCom Duties/Casual Socializing / Chatting/Recreation [Gaming, Eating, Relaxing])
+\item Rate the current conditions on how they impact your focus [1 = Very Disruptive, 5 = Excellent/Perfect] (Noise Level | Thermal Comfort | Lighting Conditions | Occupancy Level)
+\item What are the TOP TWO reasons you chose to sit here today? [Tick up to TWO](Proximity to faculty/lectures/Availability of power plugs - Wi-Fi - Signal strength/Large seating space/Atmosphere/To meet up with friends)
+\item If you had a strict assignment deadline due tomorrow morning, how would your behavior change?(I would stay here to complete it/I would relocate immediately to a quieter space [e.g., Library])
+\end{enumerate}
+
+\clearpage
+
+We reached out to willing participants in the Open Area to collect pilot data. Google Form was selected as the primary data collection platform.
+
+\vspace{1cm}
+
+With those questions these were the variables we were focusing on.
+
+\begin{itemize}
+\item Demographic Variables
+    \begin{itemize}
+        \item User Faculty (Identifies the student's affiliated faculty)
+        \item Academic Year (Categorizes the student's seniority level)
+    \end{itemize}
+\item Temporal Variables
+    \begin{itemize}
+        \item Session Duration (Measures the expected length of time occupying the space)
+    \end{itemize}
+\item Usage Variables
+    \begin{itemize}
+        \item Primary Activity Type (Classifies the specific academic or non-academic action taking place)
+        \item Secondary Concurrent Activities (Captures additional simultaneous actions as a multi-response variable)
+    \end{itemize}
+\item Environmental Variables
+    \begin{itemize}
+        \item Noise Level (Measures the degree of auditory disruption)
+        \item Thermal Comfort (Measures the impact of heat and weather)
+        \item Lighting Conditions (Measures visibility and lighting quality)
+        \item Crowd/Occupancy Level (Measures the physical density of the space)
+    \end{itemize}
+\item Motivational Variables
+    \begin{itemize}
+        \item Primary Motivation (Identifies specific pull factors like resources, convenience, or social presence)
+    \end{itemize}
+\item Behavioral Intent Variables
+    \begin{itemize}
+        \item  Deadline Behavior (Measures the environmental tipping point that causes a student to relocate)
+    \end{itemize}
+\end{itemize}
+
+Then another one of us recorded the questions the interviewees found a little bit confusing or difficult to answer and noted them down. Also we further thought of what questions should be edited or may be even added after the insights we got by the little-post interview chat we had with them. They exposed us different sides we should test in the survey to get a full understanding about our research area usage because the interviewees' opinions showed various flaws in our survey question we had arranged those we did not capture and also what other factors they have got, those can make a direct impact on their open area usage habits. This way we conducted a successful pilot test with 20+ students and here are the \href{https://docs.google.com/spreadsheets/d/15F8ChuzG3wAU8q_CIp5JnZFKxm5P4HrAdkYS0s_HcBU/edit?usp=sharing}{\textbf{Survey Results}} as an excel file.
+
+\chapter{Critical Analysis: Pilot Findings and Reflection}
+Honestly, the pilot test was a huge eye-opener because it showed us that our initial draft was way too rigid and lacked the actual depth needed for a real-world environment. First, we observed that many students naturally multitask in the UCSC Open Area. However, from an analysis perspective, the \textbf{Primary Activity} variable must remain single-choice so that each respondent contributes one dominant category, keeping percentages and cross-tabulation tests statistically valid. To capture real behavior without breaking that structure, we retained a single-choice primary activity item and added a separate optional multi-select item for secondary concurrent activities.
+
+Furthermore, we realized we were missing some huge contextual variables that would limit our final analysis. For example, knowing someone is studying doesn't actually tell us if they are completely dependent on being plugged into a wall socket or if they are just running comfortably on battery power. In the sense, the academic students are always not there for the facilities. Some are there for different reasons. So we have to capture those explicitly like what they are here for in the open area and why. Plus, our draft completely ignored the reality of social friction and weather that can make a huge and considerable impact on the behavior and usage patterns of UCSC Open Area occupants. We didn't have any questions about how students react when a loud social event suddenly takes over the space, or how rain and extreme heat actually displace people. In order to make this place a better place for people who keep choosing the place despite all those environmental and human factors just for taking the advantage of other reasons to be there we want to get their insights on possible improvements those can be done to make the UCSC open area a better place.
+
+\chapter{Revisions and Final Instrument}
+Taking all of those failures into account, we went back and practically overhauled the instrument to make sure our final data collection is actually methodological, insightful and resourceful.
+
+The changes we made can be drafted in brief as follows.
+
+\begin{itemize}
+\item Kept the primary activity question as single-choice to preserve statistical validity.
+\item Added a separate optional multi-select question to capture secondary concurrent activities.
+\item Anchored the environmental ratings (noise, heat, lighting) to the exact present moment by emphasizing "RIGHT NOW".
+\item Expanded the deadline behavior question from a strict "stay vs. leave" to include nuanced, conditional options.
+\item Added a question to track how many days per week the student uses the space.
+\item Added a question to get some insights about the infrastructure usage of the area by the users.
+\item Added a hypothetical scenario to measure how students react to sudden noise from social/non-academic events.
+\item Added a question to measure how weather affects their choice to use the space.
+\item Added a question to assess any possible infrastructure or any other improvement possible to be done in the area.
+
+\end{itemize}
+
+\chapter{Conclusion and Future Work}
+In the end, running this pilot test was absolutely essential and insightful because it highlighted the rigid formatting flaws and the major gaps in our first draft with what was missing and what was already there. By paying low-level attention to how participants interacted with the survey and realizing what real-world context we were missing, we were able to expand the response options to capture actual behavioral nuance and physical infrastructure dependencies. Now that these revisions are done, the finalized survey is a lot more realistic, methodologically solid, and completely ready for the mass data collection we have to do in the upcoming phases.
+
+So these are the final variables concluded for future work.
+
+\begin{itemize}
+\item Demographic Variables
+    \begin{itemize}
+        \item User Faculty (Identifies the student's affiliated faculty)
+        \item Academic Year (Categorizes the student's seniority level)
+    \end{itemize}
+\item Temporal Variables
+    \begin{itemize}
+        \item Weekly Frequency (Measures how many days per week the student utilizes the space)
+        \item Session Duration (Measures the expected length of time occupying the space during a single visit)
+    \end{itemize}
+\item Usage Variables
+    \begin{itemize}
+        \item Primary Activity Type (Classifies the dominant academic or non-academic action taking place at that moment)
+        \item Secondary Concurrent Activities (Captures additional simultaneous actions as a multi-response variable)
+    \end{itemize}
+\item Environmental Variables
+    \begin{itemize}
+        \item Noise Level (Measures the degree of auditory disruption)
+        \item Thermal Comfort (Measures the current impact of heat and ambient temperature)
+        \item Lighting Conditions (Measures visibility and lighting quality)
+        \item Crowd/Occupancy Level (Measures the physical density of the space)
+        \item Weather Impact (Measures how external extremes like rain alter the decision to use the space)
+    \end{itemize}
+\item Motivational Variables
+    \begin{itemize}
+        \item Primary Motivation (Identifies specific pull factors like resources, convenience, or social presence)
+    \end{itemize}
+\item Infrastructural Variables
+    \begin{itemize}
+        \item Power Dependency (Identifies reliance on continuous wall-socket power versus battery power)
+    \end{itemize}
+\item Behavioral Intent Variables
+    \begin{itemize}
+        \item Social Friction Tolerance (Measures the student's adaptability and reaction to sudden social noise disruptions)
+        \item Deadline Behavior (Measures the environmental tipping point that causes a student to relocate under academic pressure)
+        \item Headcounts (An observation checklist alongside the survey instrument to systematically track physical headcounts and temporal activity variations.)
+    \end{itemize}
+\item Facility Intervention Variables
+    \begin{itemize}
+        \item Infrastructure Upgrade Impact (Assesses how proposed changes, like installing fans, would alter future space utilization)
+    \end{itemize}
+\end{itemize}
+
+
+\begin{table}[h!]
+\centering
+\caption{Operational Mapping of Research Variables and Measurement Scales}
+\label{tab:variable_mapping}
+\begin{adjustbox}{max width=\linewidth, center} % Fixed width and moved caption outside
+\footnotesize
+\begin{tabular}{|l|l|l|l|}
+\hline
+\textbf{Variable Group} & \textbf{Primary Indicators} & \textbf{Scale Type} & \textbf{Collection Instrument} \\ \hline
+Demographic \& Temporal & Faculty, Academic Year, Frequency & Nominal / Ordinal & Student Survey \\ \hline
+Spatial \& Occupancy & Zone Allocation, Total Headcount & Nominal / Ratio & Observation Checklist \\ \hline
+Usage Patterns & Primary Activity, Co-activities & Nominal & Student Survey \\ \hline
+Environmental Factors & Noise, Thermal, Lighting, Crowding & Ordinal (1--5 Scale) & Survey / Checklist \\ \hline
+Infrastructural Focus & Power Dependency, Upgrade Impact & Nominal / Ordinal & Student Survey \\ \hline
+Behavioral Dynamics & Deadline Shift, Social Friction Limit & Nominal / Ordinal & Student Survey \\ \hline
+\end{tabular}
+\end{adjustbox}
+\end{table}
+
+\vspace{2.5cm}
+
+\begin{center}
+    * * * * *
+\end{center}
+
+\printindex
+
+\end{document}

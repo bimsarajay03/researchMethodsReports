@@ -79,20 +79,31 @@ researchMethodsReports/
 
 ### Option B — Local macOS Setup
 
-1. **Install TeX Live (full)**
+1. **Install BasicTeX** (~100 MB, sufficient for all reports in this repo)
    ```bash
-   brew install --cask mactex
+   brew install --cask basictex
    ```
-   > This installs MacTeX (~5 GB) which includes `pdflatex`, `lualatex`, `biber`, and `latexmk`.
+   > If you prefer the full MacTeX distribution (~5 GB) use `brew install --cask mactex` instead.
 
-2. **Reload your shell** (or open a new terminal) so `pdflatex` is on your `PATH`.
+2. **Add TeX Live to your PATH** — BasicTeX does not add itself to the shell PATH automatically:
+   ```bash
+   echo 'export PATH="/usr/local/texlive/2026basic/bin/universal-darwin:$PATH"' >> ~/.zshrc
+   source ~/.zshrc
+   ```
+   > The folder name contains the year (`2026basic`). Adjust if you installed a different year.
 
-3. **Install VS Code extensions** (optional but strongly recommended):
+3. **Install the required TeX packages**:
+   ```bash
+   sudo tlmgr update --self
+   sudo tlmgr install latexmk biblatex biber biblatex-ieee collection-latexextra
+   ```
+
+4. **Install VS Code extensions** (optional but strongly recommended):
    - [LaTeX Workshop](https://marketplace.visualstudio.com/items?itemName=James-Yu.latex-workshop)
    - [LTeX – Grammar/spell check](https://marketplace.visualstudio.com/items?itemName=valentjn.vscode-ltex)
    - [GitLens](https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens)
 
-4. **Clone the repository**
+5. **Clone the repository**
    ```bash
    git clone https://github.com/<your-org>/researchMethodsReports.git
    cd researchMethodsReports
@@ -229,10 +240,12 @@ latexmk -c
 
 | Problem | Fix |
 |---------|-----|
-| `biber` not found | Install via `brew install biber` or `apt install biber` |
-| Missing package | Run `tlmgr install <package>` (TeX Live) |
-| Bibliography not updating | Run `latexmk` (it reruns biber automatically) |
-| Font errors | Make sure you have a full TeX Live install, not a minimal one |
+| `latexmk: command not found` | Add TeX Live to PATH: `export PATH="/usr/local/texlive/2026basic/bin/universal-darwin:$PATH"` then add it permanently to `~/.zshrc` |
+| `biber` not found | Run `sudo tlmgr install biber` |
+| `Style 'ieee' not found` | Run `sudo tlmgr install biblatex-ieee` |
+| Missing package error | Run `sudo tlmgr install <package-name>` |
+| Bibliography not updating | Run `latexmk -C` to clean, then `latexmk -pdf main.tex` to do a full rebuild |
+| Font errors | Install `collection-latexextra`: `sudo tlmgr install collection-latexextra` |
 
 ---
 
