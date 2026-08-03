@@ -1,0 +1,5 @@
+Predictor,Coefficient,Std. Error,p-value,Odds Ratio
+Intercept,0.848,1.493,0.5699,2.335
+Thermal Comfort,-0.997,0.343,0.0037,0.369
+Noise Level,0.528,0.404,0.1904,1.696
+Occupancy Level,-0.048,0.253,0.85,0.953

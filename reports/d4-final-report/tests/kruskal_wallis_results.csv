@@ -1,0 +1,3 @@
+Variable,H-statistic,df,p-value,Significant (a=0.05)
+Thermal Comfort,75.662,3,<0.001,Yes
+Occupancy Level,82.164,3,<0.001,Yes
